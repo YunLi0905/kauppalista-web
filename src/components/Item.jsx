@@ -1,13 +1,9 @@
 import React from "react"
+import { Card } from "semantic-ui-react"
 
-const Item = ({ _id, name, quantity }) => {
-  return (
-    <div>
-      <li>
-        <p>{(_id, name, quantity)}</p>
-      </li>
-    </div>
-  )
+const Item = props => {
+  const { _id, name, quantity } = props.item
+  return <Card fluid header={name} description={quantity} />
 }
 
 export default Item
